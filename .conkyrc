@@ -1,0 +1,11 @@
+out_to_console yes
+out_to_x no
+background no
+update_interval 1
+total_run_times 0
+use_spacer none
+mpd host localhost
+mpd port 6600
+
+TEXT
+$nodename | ${if_mpd_playing}${mpd_artist} - ${mpd_title} (${mpd_bitrate}kbps) | ${endif}Uptime: $uptime | Volume:${color white} ${exec amixer get Master | egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}% | ${time %a %b %d %I:%M%P} 

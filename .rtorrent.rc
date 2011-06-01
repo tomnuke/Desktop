@@ -1,0 +1,11 @@
+directory = /media/Media/Downloads/Uncat
+session = ./.rtsession
+port_range = 51232-51232
+hash_read_ahead = 10
+hash_interval = 10
+hash_max_tries = 10
+schedule = music_watch,10,10,"load_start=/media/Media/Downloads/Music/torrents/*.torrent,d.set_directory=/media/Media/Downloads/Music/,d.set_custom1=Music"
+schedule = movies_watch,10,10,"load_start=/media/Media/Downloads/Movies/torrents/*.torrent,d.set_directory=/media/Media/Downloads/Movies/,d.set_custom1=Movies"
+schedule = tv_watch,10,10,"load_start=/media/Media/Downloads/TV/torrents/*.torrent,d.set_directory=/media/Media/Downloads/TV/,d.set_custom1=TV"
+
+system.method.set_key = event.download.finished,import_album,"execute=import_album_term,$d.get_base_path="

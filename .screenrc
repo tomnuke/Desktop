@@ -1,0 +1,19 @@
+screen -t rtorrent rtorrent
+screen -t ncmpcpp ncmpcpp
+screen -t bash3
+screen -t bash4
+screen -t bash5
+screen -t bash6
+screen -t bash7
+screen -t bash8
+screen -t bash8
+altscreen on
+term screen-256color
+bindkey -k k3 prev
+bindkey -k k4 next
+
+#change the hardstatus settings to give an window list at the bottom of the                                                                        
+#screen, with the time and date and with the current window highlighted                                                                            
+hardstatus alwayslastline
+#hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%< %{= kG}%-=%c:%s%{-}'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
